@@ -1,0 +1,17 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Greet
+        uses: kota65535/hello-world-javascript-action@main
+        with:
+          who-to-greet: foo
